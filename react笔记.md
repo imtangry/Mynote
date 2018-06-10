@@ -44,17 +44,17 @@ function Element (tagName, props, children) {
 
 ## 1.4 安装webpack-dev-server：
 
-1.webpack-dev-sever（相当于一个小型服务器）:`cnpm i webpack-dev-sever -D`，可以实现js热部署
+1.webpack-dev-sever（相当于一个小型服务器）:`cnpm i webpack-dev-server -D`，可以实现js热部署
 
 2.注意：
 
 * webpack-dev-server 打包好的main.js是放在内存里的，项目根目录其实是没有这个文件的；
 * 模版文件中的js路径应该选择根目录内存中的mian.js；
-* package.json下配置script属性：`webpack-dev-sever --open --port 3000 --hot --progress --compress --host 127.0.0.1`可以实现编译后直接打开在默认浏览器中。
+* package.json下配置script属性：`webpack-dev-server --open --port 3000 --hot --progress --compress --host 127.0.0.1`可以实现编译后直接打开在默认浏览器中。
 
 ## 1.5 安装html-webpack-plugins：
 
-1.可以实现网页文件的热部署，将html加入到内存中：`npm i html-webpack-plugins -D`
+1.可以实现网页文件的热部署，将html加入到内存中：`npm i html-webpack-plugin -D`
 
 2.使用：配置webpack.config.js
 
