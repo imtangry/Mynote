@@ -9,9 +9,9 @@
 ```javascript
 //创建构造函数
 function Element (tagName, props, children) {
-  this.tagName = tagName；
-  this.props = props；
-  this.children = children；
+  this.tagName = tagName;
+  this.props = props;
+  this.children = children;
 }
 ```
 ##1.2 Diff算法:
