@@ -76,7 +76,7 @@ module.exports = {
 ## 1.6 在项目中使用react：
 
 1.运行`npm i react react-dom -S`安装包
-
+* `-S` 生产上线都需要用到的包/`-D` 工具等开发时依赖的包
 * react：专门用于创建组件，同时组件的生命周期都在这个包中
 * react-dom：专门进行DOM操作的，常用的方法之一：ReactDOM.render()
 
@@ -94,8 +94,18 @@ module.exports = {
 import React from 'react' //创建组件,虚拟DOM,生命周期
 import ReactDOM from 'reactDOM' //将虚拟DOM放在页面上展示
 ```
-
-
+4.创建虚拟DOM
+```javascript
+//创建虚拟DOM
+//参数1：字符串类型的参数，表示要创建的元标签的名称
+//参数2：对象类型的参数，表示要创建的属性节点
+//参数3：子节点
+const myH1=React.creatElement('h1',{title:'你好',id:"myh1"},'这是一个子节点');
+```
+5.渲染
+```javascript
+    
+```
 
 ##参考：
 
