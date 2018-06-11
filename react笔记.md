@@ -109,6 +109,6 @@ const myH1=React.creatElement('h1',{title:'你好',id:"myh1"},'这是一个子�
 
 ##参考：
 
-* https://github.com/livoras/blog 做的笔记
+* https://github.com/livoras/blog
 * 黑马react视频
 
