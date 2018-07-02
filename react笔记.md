@@ -106,9 +106,13 @@ const myH1=React.creatElement('h1',{title:'你好',id:"myh1"},'这是一个子�
 ```javascript
     
 ```
+6.webpack对于ReactDom.render()中的jsx语法无法识别，需要安装plugins
+  - `cnpm i -D babel-loader babel-core`
+  - `cnpm i -D babel-preset-react`
+  
 
 ##参考：
 
-* https://github.com/livoras/blog
-* 黑马react视频
+- https://github.com/livoras/blog
+- 黑马react视频
 
