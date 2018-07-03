@@ -2,11 +2,12 @@
     box-sizing: border-box
 }
 
-#content > .c {
+#content  .c {
     overflow: hidden;
 }
 
-#content > .c > .item {
+#content .c > .item {
+    padding:10px 0 10px 10px;
     float: left;
     width: 22%;
     margin: 20px 1.5%;
@@ -15,6 +16,9 @@
     border-radius: 5px;
 }
 
-#content > .c > .item >img{
+#content  .c > .item >img{
     width: 100%;
+}
+#content  .c > .item >span{
+    display: block;
 }

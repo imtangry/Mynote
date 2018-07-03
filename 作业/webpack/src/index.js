@@ -79,7 +79,7 @@ ReactDOM.render(
 );
 ReactDOM.render(
     <div>
-        <Content {...users}/>
+        <Content users={users}/>
     </div>,
     document.getElementById("content")
 );
