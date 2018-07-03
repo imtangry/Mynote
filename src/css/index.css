@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box
+}
+
+#content > .c {
+    overflow: hidden;
+}
+
+#content > .c > .item {
+    float: left;
+    width: 22%;
+    margin: 20px 1.5%;
+    border: 1px solid #8c8c8c;
+    box-shadow: 0 0 10px #666666;
+    border-radius: 5px;
+}
+
+#content > .c > .item >img{
+    width: 100%;
+}

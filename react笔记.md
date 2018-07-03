@@ -43,7 +43,7 @@ function Element (tagName, props, children) {
   ```
  6.package.json里的scripts用来配置命令行,局部安装的插件不可以在命令行窗口直接使用命令,需要写在scripts配置里
  
- 其他：使用exclude:[path.resolve(--dirname,"node_modules")],可以让webpack不解析这个文件夹里的内容,可以提高性能
+ 其他：使用exclude:[path.resolve(__dirname,"node_modules")],可以让webpack不解析这个文件夹里的内容,可以提高性能
 
 ## 1.4 安装webpack-dev-server：
 
