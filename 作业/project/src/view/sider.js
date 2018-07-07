@@ -11,13 +11,20 @@ class Sider extends Component {
   }
 
   render() {
+      var style = {};
+      if(this.props.mode==="mobile"){
+          style={ width:100 + "%",textAlign:'center' }
+      }else if(this.props.mode==="pc"){
+          style={ width:200 }
+          console.log("OKK");
+      }
     return (
       <Menu
         onClick={this.handleClick}
-        style={{ width: 200 }}
         defaultSelectedKeys={['1']}
+        style={style}
         defaultOpenKeys={['sub1']}
-        mode="inline"
+        mode={'inline'}
       >
         {/* <SubMenu key="sub1" title={<span><Icon type="mail" /><span>更多</span></span>}> */}
             <Menu.Item key="1"><Link to="/blog/all">全部</Link></Menu.Item>

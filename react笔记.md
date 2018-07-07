@@ -117,6 +117,7 @@ const myH1=React.creatElement('h1',{title:'你好',id:"myh1"},'这是一个子�
 ##2.1 主要内容：
 ###2.1.1 jsx:
 - 可以在js代码中直接书写html代码
+- js中书写样式`<Menu style={{ width: 100 ='%' }} />`,父组件添加resize事件,可以根据父组件传入的prop判断然后声明一个对象,实现响应式更新样式
 ###2.1.2 组件:
 ####1.无状态函数式组件
 创建纯展示组件,只负责根据传入的props来展示,不涉及到要state状态的操作,是一个只带有一个render方法的组件类
@@ -146,39 +147,4 @@ const myH1=React.creatElement('h1',{title:'你好',id:"myh1"},'这是一个子�
 
 - https://github.com/livoras/blog
 - 黑马react视频
-
-
-
-
-
-
-
-
-
-
-
-
-
-小仙女 11:15:46
-	<script type="text/javascript">
-		function Foo() {
-			getName = function() { alert(1); };
-			return this;
-		}
-		Foo.getName = function() { alert(2); };
-		Foo.prototype.getName = function() { alert(3); };
-		var getName = function() { alert(4); };
-
-		function getName() { alert(5); }
-
-		//请写出以下输出结果：
-			Foo.getName();//2
-			getName();//4
-			Foo().getName()//1
-			getName();//1
-			new Foo.getName();//2
-			new Foo().getName();//3
-			new new Foo().getName();//3
-	</script>
-
 

@@ -1,17 +1,49 @@
-import React, { Component } from 'react';
-import { Layout } from 'antd';
+import React, {Component} from 'react';
+import {Layout, Row, Col} from 'antd';
 import Index from '../router/index';
 import SiderBar from "./sider";
-const { Sider, Content } = Layout;
 
+const {Content} = Layout;
+
+// 这里需要监听窗口大小,自动改变组件状态
 class MainContent extends Component {
+    constructor() {
+        super();
+        this.state = {
+            mode:""
+        }
+
+    }
+
+    // noinspection JSAnnotator
+    sizeChange() {
+        var winWidth;
+        if (window.innerWidth)
+            winWidth = window.innerWidth;
+        else if ((document.body) && (document.body.clientWidth))
+            winWidth = document.body.clientWidth;
+        console.log("winWidth:"+winWidth);
+        if (winWidth <= 768&&this.state.mode!=="mobile") {
+            this.setState({mode:"mobile"})
+        }else if(winWidth>768&&this.state.mode!=="pc"){
+            this.setState({mode:"pc"})
+        }
+    }
+    componentWillMount() {
+        window.addEventListener("resize", this.sizeChange.bind(this));
+        this.sizeChange();
+    }
+
     render() {
         return (
-                <Layout>
-                    <Sider><SiderBar/></Sider>
-                    <Content><Index /></Content>
-                </Layout>
-        );
+            <Content>
+                <Row>
+                    <Col xs={24} md={6}><SiderBar mode={this.state.mode}/></Col>
+                    <Col xs={24} md={18}><Index/></Col>
+                </Row>
+            </Content>
+        )
     }
 }
+
 export default MainContent;

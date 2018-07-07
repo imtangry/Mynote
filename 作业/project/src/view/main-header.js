@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Layout, Row, Col, Divider, Menu, Dropdown, Button,Icon} from "antd";
 import { Link } from "react-router-dom"
 import "../css/common.css"
+const { Header } = Layout;
 const HeadNav = ({mode}) => (
     <Menu mode={mode} theme="dark" className="hn_list">
         <Menu.Item><Link to="/">首页</Link></Menu.Item>
@@ -11,7 +12,7 @@ const HeadNav = ({mode}) => (
 
 class MainHeader extends Component {
     render() {
-        return (<Layout.Header>
+        return (<Header>
             <Row>
                 <Col md={4} xs={24}>
                     <h1 className="logo">CNZT</h1>
@@ -24,7 +25,7 @@ class MainHeader extends Component {
                     <Button className="ant-col-md-0"><Icon type="menu-fold" /></Button>
                 </Dropdown>
             </Row>
-        </Layout.Header>
+        </Header>
         )
     }
 }
