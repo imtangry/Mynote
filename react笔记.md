@@ -136,13 +136,43 @@ const myH1=React.creatElement('h1',{title:'你好',id:"myh1"},'这是一个子�
   - 无状态组件使得代码结构更加清晰,减少代码冗余,在开发过程中,尽量使用无状态组件
 ####2.React.Component
 - 特点
-  - 成员函数不会自动绑定this,需要开发者手动绑定,否则this不能获取当前组件实例对象。
+  - 成员函数不会自动绑定this,需要开发者手动绑定,否则this不能获取当前组件实例对象。可以在constructor使用bind绑定this,回调函数中则需要在回调函数中绑定
   - 状态state是在constructor中像初始化。
   - props属性类型和组件默认属性作为组件类的属性,不是组件实例的属性,所以使用类的静态属性配置。
-
+###shouldComponentUpdate方法
+```jsx harmony
+    // 这个可以选择是否更新组件,性能不错
+    shouldComponentUpdate (nextProps, nextState){
+        var nextTab = this.props.match.params.tab;
+        console.log(this.props.match.params.tab);
+        if (nextTab !== nextState.tab) {
+            this.getData(nextTab);
+            nextState.tab = nextTab;
+            console.log("需要更新");
+            return true;
+        }
+        console.log("不更新");
+       return false;
+    }
+    // 如果有异步回调可能会出现执行两次这个方法的bug，而且第一次渲染时不会渲染数据，第二次则不会通过判断
+```
 [链接](https://www.jianshu.com/p/f5c9ec0917bb)
 
-
+## React-Router使用:
+- Route可以使用render方法
+```jsx harmony
+// 这样可以渲染组件，而且可以传参，就和普通render方法一样
+ <Row>
+   <Route path="/" exact render={()=>(<Redirect to="/index" />)}/>
+   <Route path="/index" render={()=>(
+       <Col xs={24} md={6}>
+       <SiderBar mode={this.state.mode}/>
+       </Col>)}
+    />
+ </Row>
+```
+- 相同path的Route可以配置多次，这样可以一个路径下选择性更新加载组件,但是通配的路径需要放在下面，不然会和express中的router一样会覆盖
+- 可以通过在组件中可以使用`this.props.match.params.someValues`来获得Route中path匹配的变量,对于render方法加载的组件暂时没找到传递参数的方法
 ##参考：
 
 - https://github.com/livoras/blog

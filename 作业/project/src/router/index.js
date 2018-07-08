@@ -9,9 +9,9 @@ class RouterIndex extends Component {
     render() {
         return (
             <div>
-               <Route path="/" exact render={()=>(<Redirect to="/index" />)}/> 
-               <Route path="/index"  component={Index}/> 
-               <Route path="/book"  component={Book}/> 
+               <Route path="/index" exact render={() => (<Redirect to="/index/article/all"/>)}/>
+               <Route exact path="/index/article/:tab" component={Index}/>
+               <Route path="/book"  component={Book}/>
                <Route path="/about"  component={About}/> 
                <Route path="/user"  component={User}/> 
                <Route path="/detail"  component={Detail}/> 

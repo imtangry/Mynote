@@ -4,10 +4,10 @@ import { Link } from "react-router-dom"
 import "../css/common.css"
 const { Header } = Layout;
 const HeadNav = ({mode}) => (
-    <Menu mode={mode} theme="dark" className="hn_list">
-        <Menu.Item><Link to="/">首页</Link></Menu.Item>
-        <Menu.Item><Link to="/book">教程</Link></Menu.Item>
-        <Menu.Item><Link to="/about">关于</Link></Menu.Item>
+    <Menu mode={mode} defaultSelectedKeys={['1']} theme="dark" className="hn_list">
+        <Menu.Item key="1"><Link to="/">首页</Link></Menu.Item>
+        <Menu.Item key="2"><Link to="/book">教程</Link></Menu.Item>
+        <Menu.Item key="3"><Link to="/about">关于</Link></Menu.Item>
     </Menu>);
 
 class MainHeader extends Component {

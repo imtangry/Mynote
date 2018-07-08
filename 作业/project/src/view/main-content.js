@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Layout, Row, Col} from 'antd';
+import {Route, Redirect} from "react-router-dom";
 import Index from '../router/index';
 import SiderBar from "./sider";
 
@@ -10,7 +11,7 @@ class MainContent extends Component {
     constructor() {
         super();
         this.state = {
-            mode:""
+            mode: ""
         }
 
     }
@@ -22,13 +23,14 @@ class MainContent extends Component {
             winWidth = window.innerWidth;
         else if ((document.body) && (document.body.clientWidth))
             winWidth = document.body.clientWidth;
-        console.log("winWidth:"+winWidth);
-        if (winWidth <= 768&&this.state.mode!=="mobile") {
-            this.setState({mode:"mobile"})
-        }else if(winWidth>768&&this.state.mode!=="pc"){
-            this.setState({mode:"pc"})
+        // console.log("winWidth:" + winWidth);
+        if (winWidth <= 768 && this.state.mode !== "mobile") {
+            this.setState({mode: "mobile"})
+        } else if (winWidth > 768 && this.state.mode !== "pc") {
+            this.setState({mode: "pc"})
         }
     }
+
     componentWillMount() {
         window.addEventListener("resize", this.sizeChange.bind(this));
         this.sizeChange();
@@ -38,7 +40,10 @@ class MainContent extends Component {
         return (
             <Content>
                 <Row>
-                    <Col xs={24} md={6}><SiderBar mode={this.state.mode}/></Col>
+                    <Route path="/" exact render={() => (<Redirect to="/index"/>)}/>
+                    <Route path="/index"
+                           render={() => (<Col xs={24} md={6}><SiderBar mode={this.state.mode}/></Col>)}/>
+
                     <Col xs={24} md={18}><Index/></Col>
                 </Row>
             </Content>
