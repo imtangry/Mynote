@@ -1,6 +1,7 @@
 #root .ant-layout-header {
     padding: 0 10px;
 }
+
 #root .ant-layout-header .ant-row .logo {
     color: white;
     text-align: center;
@@ -12,24 +13,66 @@
     height: 64px;
 }
 
-#root .ant-layout-header .ant-row .head_nav .headDivider  {
+#root .ant-layout-header .ant-row .head_nav .headDivider {
     height: 44px;
     margin-top: 10px;
     float: left;
 }
+
 #root .ant-layout-header .ant-row .head_nav .hn_list {
     height: 64px;
     line-height: 64px;
     float: left;
 }
-#root .ant-layout-header .ant-row .head_nav .hn_list .ant-menu-item{
+
+#root .ant-layout-header .ant-row .head_nav .hn_list .ant-menu-item {
     padding: 0 30px;
 }
+
 #root .ant-layout-header .ant-row .ant-btn {
     position: absolute;
-    top:16px;
+    top: 16px;
     right: 20px;
     color: black;
     border-color: aliceblue;
     outline: none;
+}
+
+.u_info {
+    text-align: center;
+    background-color: white;
+    overflow: hidden;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.u_info > .u_head {
+    padding: 15px 0;
+}
+
+.u_info span {
+    color: #72b3ff;
+}
+
+.u_info > .u_head > .ant-avatar {
+
+    width: 100px;
+    height: 100px;
+    background-color: #555555;
+    border-radius: 50%
+}
+
+.u_info > .u_head > .ant-avatar > .anticon {
+    line-height: 100px;
+    font-size: 60px;
+}
+
+.a_c {
+    padding: 15px 20px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.u_article {
+    background-color: white;
+    padding: 5px 20px;
 }
