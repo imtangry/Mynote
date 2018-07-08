@@ -43,7 +43,6 @@ class MainContent extends Component {
                     <Route path="/" exact render={() => (<Redirect to="/index"/>)}/>
                     <Route path="/index"
                            render={() => (<Col xs={24} md={6}><SiderBar mode={this.state.mode}/></Col>)}/>
-
                     <Col xs={24} md={18}><Index/></Col>
                 </Row>
             </Content>

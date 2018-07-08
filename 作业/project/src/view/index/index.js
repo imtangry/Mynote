@@ -118,7 +118,7 @@ class Index extends Component {
                             avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"/>}
                             title={<div><ArticleTag tab={item.tab}/><a href="/article/#">{item.title}</a></div>}
                             description={<p><Link
-                                to={"/user/" + item.uid}>{item.loginnname}</Link> 发布日期 {item.createdate}</p>}
+                                to={"/user/" + item.uid}>{item.loginname}</Link> 发布日期 {item.createdate}</p>}
                         />
                     </List.Item>
                 )}
