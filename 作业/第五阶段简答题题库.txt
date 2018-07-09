@@ -1,0 +1,120 @@
+简答题：
+
+1)nodejs的特点
+单线程  非io阻塞   事件环
+Node.js 异步编程的直接体现就是回调。
+
+
+Node.js 是单进程单线程应用程序，但是通过事件和回调支持并发，所以性能非常高。
+
+
+Node.js 基本上所有的事件机制都是用设计模式中观察者模式实现。
+
+
+Node.js 单线程类似进入一个while(true)的事件循环，直到没有事件观察者退出，每个异步事件
+ 都生成一个事件观察者，如果有事件发生就调用该回调函数.
+
+
+
+2) nodejs常用的系统模块有哪些，它们的功能是什么？
+
+
+3) 如何在nodejs中获取get和post的请求参数？
+
+
+4) express中间件的功能是什么？
+
+
+5 )express中的常用模板有哪些？
+ejs和jade
+
+6 )ES6的模板字符串有哪些新特性？
+答：
+第一个用途，基本的字符串格式化。将表达式嵌入字符串中进行拼接。用${}来界定。
+    //es5
+    var name = 'lux'
+    console.log('hello' + name)
+    //es6
+    const name = 'lux'
+    console.log(`hello ${name}`) //hello lux
+第二个用途，在ES5时我们通过反斜杠(\)来做多行字符串或者字符串一行行拼接。ES6反引号(``)直接搞定。
+    // es5
+    var msg = "Hi \
+    man!
+    "
+    // es6
+    const template = `<div>
+        <span>hello world</span>
+    </div>`
+
+7 箭头有哪些新特点？
+答：
+不需要function关键字来创建函数
+省略return关键字
+继承当前上下文的 this 关键字
+
+
+8) 什么是promise？
+
+Promise可以帮助我们更好地处理异步操作。
+下面的实例中，100ms后会打印result字符串。catch用于错误处理。多个Promise可以链接起来
+new Promise((resolve, reject) =>
+
+    {
+
+        setTimeout(() =>
+
+        {
+
+            resolve('result');
+
+        }, 100)
+
+    })
+
+    .then(console.log)
+
+    .catch(console.error);
+
+9)promise对象的用法,手写一个promise
+var promise = new Promise((resolve,reject) => {
+    if (操作成功) {
+        resolve(value)
+    } else {
+        reject(error)
+    }
+})
+
+promise.then(function (value) {
+    // success
+},function (value) {
+    // failure
+})
+
+
+10) let 和const:
+
+*let是更完美的var，不是全局变量，具有块级函数作用域,大多数情况不会发生变量提升。const定义常量值，不能够重新赋值，如果值是一个对象，可以改变对象里边的属性值
+let
+1、let声明的变量具有块级作用域
+2、let声明的变量不能通过window.变量名进行访问
+3、形如for(let x..)的循环是每次迭代都为x创建新的绑定
+
+11）如何避免回调地狱？
+模块化：将回调函数转换为独立的函数
+使用流程控制库，例如[aync]
+使用Promise
+使用aync/await
+
+
+12）什么是事件循环？
+
+
+13）使用NPM有哪些好处？
+通过NPM，你可以安装和管理项目的依赖，并且能够指明依赖项的具体版本号。
+ 对于Node应用开发而言，你可以通过package.json文件来管理项目信息，配置脚本， 以及指明项目依赖的具体版本。
+
+
+
+
+

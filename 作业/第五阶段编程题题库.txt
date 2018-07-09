@@ -1,0 +1,26 @@
+1）利用rest参数完成一个任意数的求和功能？
+
+function add(...values) {
+    let sum = 0
+    for(var val of values) {
+        sum += val
+    }
+    return sum
+}
+
+2）利用nodejs完成用户的登录，将登录的用户及密码显示在页面上
+
+
+3)完成sum(a,b)以及sum(a)(b)的功能
+
+
+4）注册个人信息：
+将用户姓名，用户性别，用户的密码的注册信息显示在页面上
+
+
+5）利用解构赋值完成两数的交换
+
+
+
+
+
