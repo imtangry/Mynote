@@ -1,4 +1,4 @@
-let {query} =require('../db/connect.js');
+var query = require('../common/mysql');
 
 
 exports.getArticleByTab=function (tab) {

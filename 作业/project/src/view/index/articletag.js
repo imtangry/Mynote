@@ -31,7 +31,6 @@ class ArticleTag extends Component {
         let tab_now = tab[this.props.tab];
         let color = tab_now.color;
         let txt = tab_now.txt;
-        console.log(txt);
         return (
             <Tag color={color}>{txt}</Tag>
         );
