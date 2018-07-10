@@ -1,0 +1,16 @@
+1 react的生命周期有哪些，分为哪些执行阶段和执行顺序，并说明组件props发生改变时，执行的生命周期函数顺序
+
+2 请分别使用class 和stateless  function component创建React组件
+
+3 请说明webpack 的作用
+
+4 react中的refs 的作用是什么？请用代码说明
+
+5 传入setState函数的第二个参数的作用是什么？
+
+编程：
+
+使用编写Node.js连接Mysql查询任意一张表中所有数据的代码
+
+使用原生JS编写一个ajax使用get请求数据的代码。
+
