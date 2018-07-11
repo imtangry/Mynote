@@ -1,0 +1,63 @@
+1)提供一个react设计思路:
+将所有的无状态(state)只负责渲染的组件作为子组件封装到父组件包含状态机(state)当中,子组件数据变化是通过父组件的state中变量转换为子组件的props来进行渲染子组件.父组件的state管理子组件的所有props.
+
+2)react组件选择的基本原则:
+react组件选择最基本的原则在于,该组件的数据是会发生变化,如果该组件的数据不会发生变化,那么该组件应该写为一个静态UI控件.状态机state选择决定用户操作UI交互改变该组件的数据时一般选用为state,属性props一般作为父组件传递修改过后的数据给子组件时使用props属性.
+
+3)react组件的生命周期函数都有哪些?分别有什么作用?在什么时候加载?
+(1).getInitialState 这个函数会在组件被加载前调用一次,它的返回值会成为this.state的初始值
+(2).getDefaultState 这个函数会在组件被创建时调用一次,它的返回值会成为this.props的初始值
+(3).componentWillMount 这个函数在组件的生命周期中只会被调用一次,它在初始渲染render之前执行,当它执行完成之后,render会马上被调用执行.
+(4).componentDidMount 这个函数在组件的生命周期中只会被调用一次,它在初始渲染render之后执行.
+(5).componentWillReceiveProps 该函数在组件初始渲染完成之后,当组件接收到新的props时,这个函数将被调用
+(6).shouldComponentUpdate 组件在初始渲染之后,组件接收到新的state或者props时,该函数将被调用
+(7).componentWillUpdate 组件在初始渲染之后,React native框架在重新渲染组件前会调用这个函数.
+(8).componentDidUpdate 组件在初始渲染之后,React native框架在重新渲染组件之后会调用这个函数.
+(9).componentWillUnmount 组件被卸载时,这个函数将被执行.
+
+4)怎么干预组件是否应该被渲染? 怎么强制组件渲染?
+(1).在组件基本的生命周期中,shouldComponentUpdate 如果实现了这个函数,那么组件在决定重新渲染之前会先调用该函数,如果该函数返回值为false那么组件会放弃重新渲染.
+(2).react框架使用forceUpdate函数向开发者提供强制启动渲染能力,在使用该函数时,组件重新渲染之前不会调用shouldComponentUpdate.
+
+
+5)组件的引用的方式是什么样的?调用引用组件的方式是什么样的?组件的引用应该定义在哪里?
+(1).组件引用的方式,只需要在组件定义里新增 ref = ‘组件名’
+(2).调用引用组件 this.refs.’组件名’
+(3).引用组件定义在父级组件当中,并且只能被父级和当前兄弟级组件调用.
+
+6)React中调用setState之后发生了什么事情?
+
+React会将当前传入的参数对象与组件当前的状态合并,然后触发调和过程,在调和的过程中,React会以相对高效的方式根据新的状态构建React元素树并且重新渲染整个UI界面.
+React得到的元素树之后,React会自动计算出新的树与老的树的节点的差异,然后根据差异对界面进行最小化的渲染,在React的差异算法中,React能够精确的知道在哪些位置发生看改变以及应该如何去改变,这样就保证了UI是按需更新的而不是重新渲染整个界面.
+
+
+
+7)React中Element与Component的区别?
+
+ReactElement是描述屏幕上所见的内容的数据结构,是对于UI的对象的表述.典型的ReactElement就是利用JSX构建的声明式代码片段,然后被转化为createElement的调用组合.
+ReactComponent则是可以接收参数输入并且返回某个ReactElement的函数或者类
+
+
+8)在什么情况下会优先选择使用ClassComponent而不是FunctionalComponent?
+组件需要包含内部状态或者使用到生命周期函数的时候使用ClassComponent,否则使用函数式组件
+
+
+9)React中的refs属性的作用是什么?
+Refs是React提供给我们安全的访问DOM元素或者某个组件实例的句柄,我们可以为元素添加ref属性然后在回调函数中接收该元素在DOM树中的句柄,该值会作为回调函数的第一个参数的返回.
+
+
+10)在生命周期中的哪一步你应该发起 AJAX 请求？
+
+componentWillMount
+
+
+
+11)shouldComponentUpdate 的作用是啥以及为何它这么重要？
+
+允许我们手动地判断是否要进行组件更新，根据组件的应用场景设置函数的合理返回值能够帮我们避免不必要的更新。
+
+
+
+
+12)传入 setState 函数的第二个参数的作用是什么？
+该函数会在setState函数调用完成并且组件开始重渲染的时候被调用，我们可以用该函数来监听渲染是否完成

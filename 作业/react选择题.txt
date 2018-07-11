@@ -1,0 +1,51 @@
+1)组件中的状态维护，是通过（）来维护
+a) ref     b) state   c) props    d)dom
+
+
+2)哪个是react中 用于追踪哪些列表中元素被修改、被添加或者被移除的辅助标识。
+a) router	b)dom		c)keys		d)render
+
+keys 是 React 用于追踪哪些列表中元素被修改、被添加或者被移除的辅助标识。
+
+render () {
+  return (
+    <ul>
+      {this.state.todoItems.map(({task, uid}) => {
+        return <li key={uid}>{task}</li>
+      })}
+    </ul>
+  )
+}
+3)在react生命周期中，哪些生命周期函数只能执行一次（）(多选)
+a)getInitialState 	b)getDefaultState	c)componentWillMount  d)render
+
+4)在react中定义组件的方式有()(多选)
+a) class	b) function	 c) Object 	d)Component
+
+5)在react中获取数据的方式（）（多选）?
+
+a）ajax		b)$.ajax()	c)fetch		d)axios
+
+
+6)在react中，跨组件传递参数,是通过()
+a) context	b) state 	c) task		d)param
+
+
+7)在组件中，如何修改state属性的值
+a) state = 值		b)通过getState的方法	c)通过setState的方法  d)set方法
+
+8)在redux中，存储了整个应用的state的是(）
+a)localstorge		b)sessionStorage	c)store		d)libary
+
+9)在redux中,监听state发生变化的是（）
+a) store.getState()	b)store.dispatch	c)store.subscribe()	d)listener()
+
+10)在redux中，改变state ，必须触发action,reducer就是根据传入的各种action不同,相对应对state进行处理，最后返回一个新state的函数,reducer这个函数必须要有两个参数（）
+a)state  	b)action	c)redux		d)dom
+
+11)合并reducer的方法是（）
+a)union		b)combineReducers	c)all		D)and
+
+12）在babel中，插件集合的是()
+a)core		b)plugs			c)presets	d)babelrc
+
