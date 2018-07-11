@@ -5,6 +5,7 @@ import About from "../view/about/index";
 import Book from "../view/book/index";
 import Detail from "../view/detail/index";
 import User from "../view/user/index";
+import ArticleDetail from '../view/detail/articleDetail';
 class RouterIndex extends Component {
     render() {
         return (
@@ -15,6 +16,7 @@ class RouterIndex extends Component {
                <Route path="/about"  component={About}/> 
                <Route path="/user/:id"  component={User}/>
                <Route path="/detail"  component={Detail}/> 
+               <Route path="/article/id/:id"  component={ArticleDetail}/> 
             </div>
         );
     }

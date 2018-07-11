@@ -26,7 +26,7 @@ class User extends Component {
 
     render() {
         let { loginname, points, join_date, topic_with, reply } = this.props.data;
-        console.log(reply);
+        // console.log(reply);
         return (<Row>
             <Col className={'u_info'}>
                 <Col className={"u_head"}><Avatar shape={'circle'} icon="user" /></Col>
@@ -34,7 +34,7 @@ class User extends Component {
                 <Col xs={8}>积分：<span>{points}</span></Col>
                 <Col xs={8}>注册时间：<span>{(join_date+"").split('T')[0]}</span></Col>
             </Col>
-            <div className={'a_c'}>最近发表的话题</div>
+            <div className={'a_c'}>最近发表的话题</div> 
             <UserArticleList list={topic_with} ></UserArticleList>
             <div className={'a_c'}>最近回复的话题</div>
             <UserArticleList list={reply} ></UserArticleList>

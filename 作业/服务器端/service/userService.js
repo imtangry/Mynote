@@ -26,3 +26,18 @@ WHERE
 r0.ruid = ${id};`
     return query(_sql, []);
 }
+
+// 注册和登录功能
+exports.login=function(username,password){
+    var _sql = "select * from t_user where username = ? and password = ?";
+    return query(_sql,[username,password]);
+}
+// 注册和登录功能
+exports.getUserByUsername=function(username){
+    var _sql = "select * from t_user where username = ?";
+    return query(_sql,[username]);
+}
+exports.register=function(username,password,nickname){
+    var _sql = "insert into t_user values(null,?,?,?)";
+    return query(_sql,[username,password,nickname]);
+}

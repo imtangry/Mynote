@@ -14,29 +14,29 @@ class Index extends Component {
     }
     shouldComponentUpdate(nextProps, nextState) {
         var nextTab = nextProps.match.params.tab;
-        console.log("之前tab:"+this.props.match.params.tab);
-        console.log("当前tab:"+nextProps.match.params.tab);
+        // console.log("之前tab:"+this.props.match.params.tab);
+        // console.log("当前tab:"+nextProps.match.params.tab);
         if (nextTab !== this.props.match.params.tab) {
             this.getData(nextTab);
             console.log("需要更新");
             return false;
         }
         if (this.shouldUpdate) {
-            console.log(this.shouldUpdate);
-            console.log("Up");
+            // console.log(this.shouldUpdate);
+            // console.log("Up");
             return true;
         }
         else {
-            console.log(this.shouldUpdate);
-            console.log("NoUp");
-            return false
+            // console.log(this.shouldUpdate);
+            // console.log("NoUp");
+            return false;
         }
     }
     getData = (tab) => {
         this.props.dispatch((dispatch) => {
             axios.get(fakeDataUrl + "/" + tab).then((data) => {
                 this.shouldUpdate = true;
-                console.log("dispatch中回调：");
+                // console.log("dispatch中回调：");
                 // 准备发送action到store
                 dispatch({
                     type: "LIST_UPDATE_SUCCESS",
@@ -46,7 +46,6 @@ class Index extends Component {
                 console.log(err)
             })
         })
-
     }
     componentDidMount(){
          this.getData(this.props.match.params.tab);
@@ -54,7 +53,7 @@ class Index extends Component {
     render() {
         this.shouldUpdate=false;
         let { data, loading } = this.props;
-        console.log("render:" + this.props.match.params.tab);
+        // console.log("render:" + this.props.match.params.tab);
         return (
             <List
                 className="demo-loadmore-list"
@@ -65,7 +64,7 @@ class Index extends Component {
                     <List.Item actions={[<span>回复 {item.reply_count}</span>, <span>访问 {item.visit_count}</span>]}>
                         <List.Item.Meta
                             avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                            title={<div><ArticleTag tab={item.tab} /><a href="/article/#">{item.title}</a></div>}
+                            title={<div><ArticleTag tab={item.tab} /><Link to={"/article/id/"+item.id}>{item.title}</Link></div>}
                             description={<p><Link
                                 to={"/user/" + item.uid}>{item.loginname}</Link> 发布日期 {item.createdate}</p>}
                         />
@@ -75,5 +74,4 @@ class Index extends Component {
         );
     }
 }
-
 export default connect(state => state.list)(Index);

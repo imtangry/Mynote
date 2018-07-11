@@ -3,6 +3,10 @@ import {Layout, Row, Col} from 'antd';
 import {Route, Redirect} from "react-router-dom";
 import Index from '../router/index';
 import SiderBar from "./sider";
+import ArticleDetail from '../router/index';
+// import Loginin from './login/r_login'
+import Loginin from './login/github_login';
+import Register from './login/github_register';
 
 const {Content} = Layout;
 
@@ -37,6 +41,7 @@ class MainContent extends Component {
     }
 
     render() {
+        console.log("执行了main-content");
         return (
             <Content>
                 <Row>
@@ -45,6 +50,11 @@ class MainContent extends Component {
                            render={() => (<Col xs={24} md={6}><SiderBar mode={this.state.mode}/></Col>)}/>
                     <Route path="/user" render={() => (<Col xs={24} md={24}><Index/></Col>)}/>
                     <Route path="/index" render={() => (<Col xs={24} md={18}><Index/></Col>)}/>
+                    <Route path="/book" render={() => (<Col xs={24} md={24}><Index/></Col>)}/>
+                    <Route path="/about" render={() => (<Col xs={24} md={24}><Index/></Col>)}/>
+                    <Route exact path="/loginin" component={Loginin}/>
+                    <Route exact path="/register" component={Register}/>
+                    <Route exact path="/article/id/:id" render={() => (<ArticleDetail/>)}/>
                     {/*<Col xs={24} md={18}><Index/></Col>*/}
                 </Row>
             </Content>

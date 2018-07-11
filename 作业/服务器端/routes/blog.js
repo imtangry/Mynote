@@ -23,4 +23,24 @@ router.get('/:tab', function(req, res, next) {
     });
 });
 
+/* GET the article with reply  */
+router.get('/id/:id', function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    var id = req.params.id;
+    console.log(id);
+    var state = {
+      article: {},
+      reply: []
+    }
+    blogService.getArticleWithUser(id).then(function (data) {
+    //   console.log(data);
+      state.article = data[0];
+      blogService.getReplyForArticle(id).then(function (data) {
+        state.reply = data;
+        res.json(state);
+      })
+    })
+  });
+  module.exports = router;
+
 module.exports = router;
