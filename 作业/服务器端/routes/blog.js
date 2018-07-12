@@ -25,7 +25,8 @@ router.get('/:tab', function(req, res, next) {
 
 /* GET the article with reply  */
 router.get('/id/:id', function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
+    // res.header("Access-Control-Allow-Origin", "*");
+    console.log("有Cookie么?:"+req.cookies.username);
     var id = req.params.id;
     console.log(id);
     var state = {
@@ -43,4 +44,4 @@ router.get('/id/:id', function (req, res, next) {
   });
   module.exports = router;
 
-module.exports = router;
+

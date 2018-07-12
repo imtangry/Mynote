@@ -7,7 +7,6 @@ router.get('/', function (req, res, next) {
 });
 router.get('/:id', function (req, res, next) {
     console.log("C");
-    res.header("Access-Control-Allow-Origin", "*");
     var id = req.params.id;
     userService.getUserInfo(id).then(function (data) {
         res.json(data);
@@ -15,7 +14,6 @@ router.get('/:id', function (req, res, next) {
 });
 router.get('/info/:id', function (req, res, next) {
     console.log("C");
-    res.header("Access-Control-Allow-Origin", "*");
     var id = req.params.id;
     var state = {
         loginname: "",
@@ -37,11 +35,13 @@ router.get('/info/:id', function (req, res, next) {
         })
     })
 });
+
+// 注册登录的逻辑
 router.post("/login", function (req, res) {
-    res.header("Access-Control-Allow-Origin", "*");
     console.log(req.body);
     var username = req.body.username;
     var password = req.body.password;
+    res.cookie('username', username);
     userService.login(username, password).then(function (data) {
         console.log(data);
         if (data.length > 0) {
@@ -53,7 +53,6 @@ router.post("/login", function (req, res) {
 });
 
 router.post("/register", function (req, res) {
-    res.header("Access-Control-Allow-Origin", "*");
     console.log(req.body);
     var username = req.body.username;
     var password = req.body.password;
