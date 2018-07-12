@@ -42,7 +42,8 @@ class NormalLoginForm extends Component {
                         'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
                     },
                     url: "http://localhost:3000/users/login",
-                    data:params
+                    data:params,
+                    withCredentials:true
                 }).then((data) => {
                     console.log(data);
                     var flag = data.data.succ;

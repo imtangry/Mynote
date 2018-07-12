@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 class User extends Component {
     getData = (id) => {
         this.props.dispatch((dispatch) => {
-            axios.get("http://localhost:3000/users/info/" + id).then((data) => {
+            axios.get("http://localhost:3000/users/info/" + id,{withCredentials:true}).then((data) => {
                 console.log("dispatch中回调：");
                 // 准备发送action到store
                 dispatch({

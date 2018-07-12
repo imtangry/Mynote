@@ -174,6 +174,33 @@ const myH1=React.creatElement('h1',{title:'你好',id:"myh1"},'这是一个子�
 - 相同path的Route可以配置多次，这样可以一个路径下选择性更新加载组件,但是通配的路径需要放在下面，不然会和express中的router一样会覆盖
 - 可以通过在组件中可以使用`this.props.match.params.someValues`来获得Route中path匹配的变量,对于render方法加载的组件暂时没找到传递参数的方法
 - 不使用exact可以使组件向后匹配,使这个组件在多个路径中通用
+## node跨域cookie
+- 服务器端:
+```javascript
+app.all('*', function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", req.headers.origin); //需要显示设置来源
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
+  res.header("Access-Control-Allow-Credentials", true); //带cookies7     res.header("Content-Type", "application/json;charset=utf-8");
+  next();
+});
+```
+- 客户端使用axios:
+```javascript
+ var params = new URLSearchParams();
+      params.append('username', "");
+      params.append('password', "");
+      params.append('nickname', "");
+      axios({
+          method: "post",
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
+          },
+          url: "http://localhost:3000/users/register",
+          data: params
+        }).then().catch()
+```
+这样设置，就可以在请求时加上cookie了
 ##参考：
 
 - https://github.com/livoras/blog

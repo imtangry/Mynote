@@ -10,7 +10,7 @@ class ArticleDetail extends Component {
         reply: null
     }
     getData = (id) => {
-        axios.get("http://localhost:3000/article/id/" + id).then(data => { console.log(data);var jsondata =data.data
+        axios.get("http://localhost:3000/article/id/" + id,{withCredentials:true}).then(data => { console.log(data);var jsondata =data.data
         this.setState({ article: jsondata.article, reply: jsondata.reply }) }).catch(err => { console.log(err) })
     }
     componentDidMount() {
