@@ -1,5 +1,9 @@
 body {
   background-color: black;
+  color: white;
+}
+a {
+  color: white;
 }
 .body {
   width: 1024px;
@@ -30,7 +34,6 @@ header > .ha > .search > form {
   font-size: 14px;
 }
 header > .ha > .search > form > #search_ha {
-  color: white;
   text-indent: 1em;
   background-color: transparent;
   padding-right: 40px;
@@ -39,7 +42,6 @@ header > .ha > .search > form > #search_ha {
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 header > .ha > .search > form i {
-  color: white;
   position: absolute;
   cursor: pointer;
   width: 35px;
@@ -64,14 +66,12 @@ header > .hb > .nav_top > li {
   line-height: 57px;
 }
 header > .hb > .nav_top > li > .active {
-  color: white;
   box-shadow: 0 0 30px rgba(246, 194, 87, 0.7);
   background-color: rgba(246, 194, 87, 0.3);
 }
 header > .hb > .nav_top > li > a {
   display: block;
   float: left;
-  color: white;
   margin-top: 9px;
   height: 40px;
   padding: 0 12px;
@@ -89,7 +89,6 @@ header > .hb > .nav_top > li > a > .more {
   text-indent: 1em;
   letter-spacing: 1px;
   border-radius: 8px;
-  color: white;
   background-color: rgba(232, 135, 37, 0.7);
 }
 header > .hb > .nav_top > li > a > .more .item {
@@ -117,6 +116,9 @@ header > .hb > .nav_top > li > .item {
   position: relative;
   width: 100%;
   height: 304px;
+  margin-top: 5px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 .nav_pic > .i_ul {
   position: relative;
@@ -171,7 +173,6 @@ header > .hb > .nav_top > li > .item {
   color: #e98923;
 }
 .content .row_c > .header_c .title {
-  color: white;
   text-align: left;
   float: left;
   height: 36px;
@@ -184,7 +185,8 @@ header > .hb > .nav_top > li > .item {
 .content .row_c > .content_c {
   width: 100%;
   padding-left: 64px;
-  margin-top: 14px;
+  margin-top: 16px;
+  margin-bottom: 14px;
   overflow: hidden;
 }
 .content .row_c > .content_c > .item {
@@ -196,7 +198,6 @@ header > .hb > .nav_top > li > .item {
 .content .row_c > .content_c > .item > .title {
   position: relative;
   z-index: 999;
-  color: white;
   font-size: 12px;
 }
 .content .row_c > .content_c > .item > .good_pic_wrap {
@@ -236,10 +237,60 @@ header > .hb > .nav_top > li > .item {
   transform-origin: bottom right;
   transform: rotate(46deg);
 }
+.content .row_c > .content_c > .sales {
+  margin-top: -14px;
+  float: left;
+}
+.content .row_c > .content_c > .sales div {
+  padding-top: 18px;
+  font-size: 12px;
+}
+.content .row_c > .content_c > .sales div a:hover {
+  color: #e98923;
+}
+.content .row_c > .content_c > .sales_part_r {
+  margin-top: 4px;
+  width: 334px;
+  float: right;
+  right: 24px;
+}
+.content .row_c > .content_c > .sales_part_r .btn {
+  float: left;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 34px;
+  margin-top: 46px;
+  border-radius: 17px;
+  border: 1px solid white;
+}
+.content .row_c > .content_c > .sales_part_r > .sales_pics {
+  float: left;
+  width: 200px;
+  height: 127px;
+  margin: 0 24px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.content .row_c > .content_c > .sales_part_r > .sales_pics > img {
+  height: 100%;
+}
+.content .row_c > .content_c .item_tutorial {
+  float: left;
+  width: 218px;
+  height: 147px;
+  border: 2px solid white;
+  border-radius: 6px;
+  margin-right: 60px;
+  overflow: hidden;
+}
+.content .row_c > .content_c .item_tutorial video {
+  object-fit: cover;
+}
 footer {
   position: relative;
   width: 1024px;
-  color: white;
   text-align: center;
   font-size: 11px;
   margin-top: 60px;

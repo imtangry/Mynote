@@ -4,6 +4,10 @@
 
 body {
   background-color: black;
+  color: white;
+}
+a{
+  color: white;
 }
 
 .body {
@@ -32,7 +36,6 @@ header {
         position: relative;
         font-size: 14px;
         > #search_ha {
-          color: white;
           text-indent: 1em;
           background-color: transparent;
           padding-right: 40px;
@@ -41,7 +44,6 @@ header {
           border: 1px solid rgba(255, 255, 255, 0.4);
         }
         i {
-          color: white;
           position: absolute;
           cursor: pointer;
           width: 35px;
@@ -66,16 +68,13 @@ header {
         width: 158px;
         font-size: 19px;
         line-height: 57px;
-
         > .active {
-          color: white;
           box-shadow: 0 0 30px rgba(246, 194, 87, 0.7);
           background-color: rgba(246, 194, 87, 0.3);
         }
         > a {
           display: block;
           float: left;
-          color: white;
           margin-top: 9px;
           height: 40px;
           padding: 0 12px;
@@ -93,7 +92,6 @@ header {
             text-indent: 1em;
             letter-spacing: 1px;
             border-radius: 8px;
-            color: white;
             background-color: rgba(232, 135, 37, 0.7);
             .item {
               transition: 0.3s;
@@ -128,6 +126,9 @@ header {
   position: relative;
   width: 100%;
   height: 304px;
+  margin-top: 5px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
   > .i_ul {
     position: relative;
     width: 400%;
@@ -168,10 +169,11 @@ header {
 //首页主体
 .content {
   margin-top: 20px;
-
+  //主体中的一个版块
   .row_c {
     width: 904px;
     margin: 0 auto;
+    //版块的头是公共的
     > .header_c {
       height: 36px;
       line-height: 36px;
@@ -183,7 +185,6 @@ header {
         color: #e98923;
       }
       .title {
-        color: white;
         text-align: left;
         float: left;
         height: 36px;
@@ -195,11 +196,14 @@ header {
         color: #e98923;
       }
     }
+    //版块中的主体
     > .content_c {
       width: 100%;
       padding-left: 64px;
-      margin-top: 14px;
+      margin-top: 16px;
+      margin-bottom: 14px;
       overflow: hidden;
+      //第一个中的元素块
       > .item {
         position: relative;
         float: left;
@@ -208,7 +212,6 @@ header {
         > .title {
           position: relative;
           z-index: 999;
-          color: white;
           font-size: 12px;
         }
         > .good_pic_wrap {
@@ -248,17 +251,70 @@ header {
             transform: rotate(46deg);
           }
         }
-
       }
-    }
 
+      //第二个中的内容
+      > .sales {
+        margin-top: -14px;
+        float: left;
+        div {
+          padding-top: 18px;
+          font-size: 12px;
+          a {
+            &:hover {
+              color: #e98923;
+            }
+          }
+        }
+      }
+      > .sales_part_r {
+        margin-top: 4px;
+        width: 334px;
+        float: right;
+        right: 24px;
+        .btn{
+          float: left;
+          width: 34px;
+          height: 34px;
+          cursor: pointer;
+          text-align: center;
+          line-height: 34px;
+          margin-top: 46px;
+          border-radius: 17px;
+          border: 1px solid white;
+        }
+        > .sales_pics {
+          float: left;
+          width: 200px;
+          height: 127px;
+          margin: 0 24px;
+          border-radius: 6px;
+          overflow: hidden;
+          >img{
+            height: 100%;
+          }
+        }
+      }
+      //首页带三个版块中的content内容
+  .item_tutorial{
+    float: left;
+    width: 218px;
+    height: 147px;
+    border: 2px solid white;
+    border-radius: 6px;
+    margin-right: 60px;
+    overflow: hidden;
+    video{
+      object-fit:cover;
+    }
+  }
+    }
   }
 }
 
 footer {
   position: relative;
   width: @pc_width;
-  color: white;
   text-align: center;
   font-size: 11px;
   margin-top: 60px;
