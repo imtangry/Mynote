@@ -6,9 +6,11 @@
   padding-top: 20px;
 }
 .content .title {
-  font-size: 30px;
+  font-size: 28px;
+  letter-spacing: 1px;
   color: black;
   border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
 }
 .bc_footer {
   background-color: #e98923;
