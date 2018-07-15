@@ -15,6 +15,7 @@
   position: relative;
   margin-top: 20px;
   overflow: hidden;
+  //步骤线
   > .step_line {
     font-size: 14px;
     float: left;
@@ -50,12 +51,58 @@
     }
 
   }
+  //商品版块
   > .goods {
     float: left;
     width: 816px;
     border: 1px solid white;
     border-radius: 6px;
     padding-top: 8px;
+    >.row_g{
+      padding-left: 52px;
+      width: 816px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      >.item{
+        float: left;
+        width: 180px;
+        margin-right: 86px;
+        >.good_pic{
+          width: 180px;
+          height: 180px;
+          margin-bottom: 5px;
+          img{
+            height: 100%;
+          }
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+        >.num{
+          float: left;
+          height: 24px;
+          line-height: 24px;
+          font-size: 20px;
+          padding-left: 5px;
+          color: white;
+        }
+        >.buy{
+          cursor: pointer;
+          float: right;
+          background-color: white;
+          color: black;
+          text-align: center;
+          width: 95px;
+          height: 24px;
+          line-height: 24px;
+          font-size: 16px;
+          font-weight: 600;
+          &:hover{
+            color: #e98923;
+          }
+        }
+      }
+    }
   }
 }
 

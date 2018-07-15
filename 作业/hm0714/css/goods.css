@@ -56,6 +56,51 @@
   border-radius: 6px;
   padding-top: 8px;
 }
+.content > .goods > .row_g {
+  padding-left: 52px;
+  width: 816px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.content > .goods > .row_g > .item {
+  float: left;
+  width: 180px;
+  margin-right: 86px;
+}
+.content > .goods > .row_g > .item > .good_pic {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 5px;
+}
+.content > .goods > .row_g > .item > .good_pic img {
+  height: 100%;
+}
+.content > .goods > .row_g > .item:last-child {
+  margin-right: 0;
+}
+.content > .goods > .row_g > .item > .num {
+  float: left;
+  height: 24px;
+  line-height: 24px;
+  font-size: 20px;
+  padding-left: 5px;
+  color: white;
+}
+.content > .goods > .row_g > .item > .buy {
+  cursor: pointer;
+  float: right;
+  background-color: white;
+  color: black;
+  text-align: center;
+  width: 95px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.content > .goods > .row_g > .item > .buy:hover {
+  color: #e98923;
+}
 .bc_footer {
   background-color: #e98923;
 }

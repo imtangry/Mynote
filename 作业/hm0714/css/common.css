@@ -2,7 +2,8 @@ body {
   background-color: black;
   color: white;
 }
-a {
+a,
+input {
   color: white;
 }
 .body {
