@@ -1,0 +1,121 @@
+body {
+  background-color: black;
+  color: white;
+}
+a {
+  color: white;
+}
+.body {
+  width: 1024px;
+  margin: 0 auto;
+  border: 1px solid white;
+}
+header {
+  width: 1024px;
+  height: 192px;
+  padding-top: 58px;
+}
+header > .ha {
+  position: relative;
+  height: 78px;
+  text-align: center;
+  margin: 0 60px;
+  border-bottom: 1px solid #e98923;
+}
+header > .ha > .search {
+  position: absolute;
+  right: 2px;
+  top: 0;
+  width: 140px;
+  height: 35px;
+}
+header > .ha > .search > form {
+  position: relative;
+  font-size: 14px;
+}
+header > .ha > .search > form > #search_ha {
+  text-indent: 1em;
+  background-color: transparent;
+  padding-right: 40px;
+  width: 140px;
+  height: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+header > .ha > .search > form i {
+  position: absolute;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  top: 0;
+  right: 0;
+  line-height: 35px;
+}
+header > .hb {
+  position: relative;
+  height: 57px;
+  padding-left: 70px;
+}
+header > .hb > .nav_top {
+  height: 57px;
+}
+header > .hb > .nav_top > li {
+  position: relative;
+  float: left;
+  width: 158px;
+  font-size: 19px;
+  line-height: 57px;
+}
+header > .hb > .nav_top > li > .active {
+  box-shadow: 0 0 30px rgba(246, 194, 87, 0.7);
+  background-color: rgba(246, 194, 87, 0.3);
+}
+header > .hb > .nav_top > li > a {
+  display: block;
+  float: left;
+  margin-top: 9px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 20px;
+  line-height: 40px;
+}
+header > .hb > .nav_top > li > a > .more {
+  display: none;
+  position: absolute;
+  top: 42px;
+  left: -5px;
+  z-index: 111;
+  width: 145px;
+  padding-bottom: 20px;
+  text-indent: 1em;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  background-color: rgba(232, 135, 37, 0.7);
+}
+header > .hb > .nav_top > li > a > .more .item {
+  transition: 0.3s;
+  padding-left: 0px;
+}
+header > .hb > .nav_top > li > a > .more .item:hover {
+  padding-left: 10px;
+}
+header > .hb > .nav_top > li > a:hover {
+  box-shadow: 0 0 30px rgba(246, 194, 87, 0.7);
+  background-color: rgba(246, 194, 87, 0.3);
+}
+header > .hb > .nav_top > li > a:hover > .more {
+  display: block;
+}
+header > .hb > .nav_top > li > .item {
+  position: relative;
+  line-height: 40px;
+  height: 30px;
+  font-size: 16px;
+}
+footer {
+  position: relative;
+  width: 1024px;
+  text-align: center;
+  font-size: 11px;
+  margin-top: 60px;
+}
+/*# sourceMappingURL=common.css.map */
