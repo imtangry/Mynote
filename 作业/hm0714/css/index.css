@@ -199,7 +199,18 @@ header > .hb > .nav_top > li > .item {
   color: white;
   font-size: 12px;
 }
-.content .row_c > .content_c > .item > .good_pic {
+.content .row_c > .content_c > .item > .good_pic_wrap {
+  width: 186px;
+  position: relative;
+}
+.content .row_c > .content_c > .item > .good_pic_wrap > .icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -1px;
+  z-index: 99;
+}
+.content .row_c > .content_c > .item > .good_pic_wrap > .good_pic {
   position: relative;
   width: 172px;
   height: 162px;
@@ -207,27 +218,23 @@ header > .hb > .nav_top > li > .item {
   margin-left: 14px;
   border: 1px solid white;
   border-radius: 6px;
+  overflow: hidden;
 }
-.content .row_c > .content_c > .item > .good_pic > .icon {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  left: -10px;
-}
-.content .row_c > .content_c > .item > .good_pic img {
+.content .row_c > .content_c > .item > .good_pic_wrap > .good_pic img {
   width: 100%;
 }
-.content .row_c > .content_c > .item > .good_pic::before {
+.content .row_c > .content_c > .item > .good_pic_wrap::before {
   content: "";
   background-color: black;
   position: absolute;
+  z-index: 99;
   top: -21px;
-  left: -36px;
-  width: 35px;
+  left: -6px;
+  width: 20px;
   height: 70px;
   border-right: 1px solid white;
   transform-origin: bottom right;
-  transform: rotate(45deg);
+  transform: rotate(46deg);
 }
 footer {
   position: relative;

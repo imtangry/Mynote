@@ -211,36 +211,44 @@ header {
           color: white;
           font-size: 12px;
         }
-        > .good_pic {
+        > .good_pic_wrap {
+          width: 186px;
           position: relative;
-          width: 172px;
-          height: 162px;
-          margin-top: 8px;
-          margin-left: 14px;
-          border: 1px solid white;
-          border-radius: 6px;
-          >.icon{
+          > .icon {
             position: absolute;
             width: 50px;
             height: 50px;
-            left: -10px;
+            top: -1px;
+            z-index: 99;
           }
-          img{
-            width: 100%;
+          > .good_pic {
+            position: relative;
+            width: 172px;
+            height: 162px;
+            margin-top: 8px;
+            margin-left: 14px;
+            border: 1px solid white;
+            border-radius: 6px;
+            overflow: hidden;
+            img {
+              width: 100%;
+            }
           }
           &::before {
             content: "";
             background-color: black;
             position: absolute;
+            z-index: 99;
             top: -21px;
-            left: -36px;
-            width: 35px;
+            left: -6px;
+            width: 20px;
             height: 70px;
             border-right: 1px solid white;
             transform-origin: bottom right;
-            transform: rotate(45deg);
+            transform: rotate(46deg);
           }
         }
+
       }
     }
 
