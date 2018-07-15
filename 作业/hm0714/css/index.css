@@ -152,6 +152,83 @@ header > .hb > .nav_top > li > .item {
 .nav_pic .i_ul_pointer .p_active {
   background-color: rgba(232, 135, 37, 0.7);
 }
+.content {
+  margin-top: 20px;
+}
+.content .row_c {
+  width: 904px;
+  margin: 0 auto;
+}
+.content .row_c > .header_c {
+  height: 36px;
+  line-height: 36px;
+  padding-right: 5px;
+  border-bottom: 1px solid #e98923;
+  text-align: right;
+}
+.content .row_c > .header_c .big_font {
+  font-size: 22px;
+  color: #e98923;
+}
+.content .row_c > .header_c .title {
+  color: white;
+  text-align: left;
+  float: left;
+  height: 36px;
+  width: 80px;
+  border: 1px solid #e98923;
+}
+.content .row_c > .header_c a {
+  color: #e98923;
+}
+.content .row_c > .content_c {
+  width: 100%;
+  padding-left: 64px;
+  margin-top: 14px;
+  overflow: hidden;
+}
+.content .row_c > .content_c > .item {
+  position: relative;
+  float: left;
+  width: 186px;
+  margin-right: 88px;
+}
+.content .row_c > .content_c > .item > .title {
+  position: relative;
+  z-index: 999;
+  color: white;
+  font-size: 12px;
+}
+.content .row_c > .content_c > .item > .good_pic {
+  position: relative;
+  width: 172px;
+  height: 162px;
+  margin-top: 8px;
+  margin-left: 14px;
+  border: 1px solid white;
+  border-radius: 6px;
+}
+.content .row_c > .content_c > .item > .good_pic > .icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: -10px;
+}
+.content .row_c > .content_c > .item > .good_pic img {
+  width: 100%;
+}
+.content .row_c > .content_c > .item > .good_pic::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: -21px;
+  left: -36px;
+  width: 35px;
+  height: 70px;
+  border-right: 1px solid white;
+  transform-origin: bottom right;
+  transform: rotate(45deg);
+}
 footer {
   position: relative;
   width: 1024px;

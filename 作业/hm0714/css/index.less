@@ -67,8 +67,7 @@ header {
         font-size: 19px;
         line-height: 57px;
 
-
-        >.active{
+        > .active {
           color: white;
           box-shadow: 0 0 30px rgba(246, 194, 87, 0.7);
           background-color: rgba(246, 194, 87, 0.3);
@@ -96,10 +95,10 @@ header {
             border-radius: 8px;
             color: white;
             background-color: rgba(232, 135, 37, 0.7);
-            .item{
+            .item {
               transition: 0.3s;
               padding-left: 0px;
-              &:hover{
+              &:hover {
                 padding-left: 10px;
               }
             }
@@ -108,7 +107,7 @@ header {
             box-shadow: 0 0 30px rgba(246, 194, 87, 0.7);
             background-color: rgba(246, 194, 87, 0.3);
           }
-          &:hover>.more{
+          &:hover > .more {
             display: block;
           }
         }
@@ -122,26 +121,24 @@ header {
     }
   }
 }
+
 //轮播图部分
-.nav_pic{
+.nav_pic {
   overflow: hidden;
   position: relative;
   width: 100%;
   height: 304px;
-  //background-color: cadetblue;
   > .i_ul {
     position: relative;
     width: 400%;
     height: 100%;
     > li {
       position: relative;
-      //display: none;
       text-align: center;
       width: 25%;
       height: 100%;
       float: left;
       > a > img {
-        //height: 100%;
         width: 100%;
       }
     }
@@ -162,7 +159,89 @@ header {
       border-radius: 1px;
     }
     .p_active {
-      background-color:  rgba(232, 135, 37, 0.7);
+      background-color: rgba(232, 135, 37, 0.7);
+    }
+
+  }
+}
+
+//首页主体
+.content {
+  margin-top: 20px;
+
+  .row_c {
+    width: 904px;
+    margin: 0 auto;
+    > .header_c {
+      height: 36px;
+      line-height: 36px;
+      padding-right: 5px;
+      border-bottom: 1px solid #e98923;
+      text-align: right;
+      .big_font {
+        font-size: 22px;
+        color: #e98923;
+      }
+      .title {
+        color: white;
+        text-align: left;
+        float: left;
+        height: 36px;
+        width: 80px;
+        border: 1px solid #e98923;
+
+      }
+      a {
+        color: #e98923;
+      }
+    }
+    > .content_c {
+      width: 100%;
+      padding-left: 64px;
+      margin-top: 14px;
+      overflow: hidden;
+      > .item {
+        position: relative;
+        float: left;
+        width: 186px;
+        margin-right: 88px;
+        > .title {
+          position: relative;
+          z-index: 999;
+          color: white;
+          font-size: 12px;
+        }
+        > .good_pic {
+          position: relative;
+          width: 172px;
+          height: 162px;
+          margin-top: 8px;
+          margin-left: 14px;
+          border: 1px solid white;
+          border-radius: 6px;
+          >.icon{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: -10px;
+          }
+          img{
+            width: 100%;
+          }
+          &::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: -21px;
+            left: -36px;
+            width: 35px;
+            height: 70px;
+            border-right: 1px solid white;
+            transform-origin: bottom right;
+            transform: rotate(45deg);
+          }
+        }
+      }
     }
 
   }
