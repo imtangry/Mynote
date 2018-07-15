@@ -12,6 +12,9 @@ const html = require('gulp-htmlmin');
 gulp.task('css',function () {
     gulp.src('./css/*.css').pipe(css()).pipe(gulp.dest('./src/css'));
 });
+gulp.task('cssa',function () {
+    gulp.src('./css/common.css').pipe(css()).pipe(gulp.dest('./src/css'));
+});
 gulp.task('js',function () {
     gulp.src('./js/*.js').pipe(js('./app.js')).pipe(ug()).pipe(gulp.dest('./src/js'));
 });
@@ -19,5 +22,5 @@ gulp.task('html',function () {
     gulp.src('./*.html').pipe(html({collapseWhitespace:true})).pipe(gulp.dest('./src'));
 });
 gulp.task('watchcss',function(){
-    gulp.watch('./css/*.css',['css']);
+    gulp.watch('./css/*.css',['css','cssa']);
 })
