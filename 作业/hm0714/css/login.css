@@ -2,8 +2,7 @@
   margin-top: 50px;
   background-color: white;
   width: 1024px;
-  padding-left: 60px;
-  padding-top: 20px;
+  padding: 20px 60px 0;
 }
 .content .title {
   font-size: 28px;
