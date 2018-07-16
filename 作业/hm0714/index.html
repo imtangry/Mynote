@@ -98,12 +98,9 @@
     <section class="content" id="index_content">
         <!--这一行可以循环-->
         <div class="row_c">
-            <div class="header_c">
-                <div class="title"><span class="big_font">巨</span>热销</div>
-                <a href="#"><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i><span>more</span></a>
-            </div>
+            <index_content_header start="巨" other="热销" flag=true></index_content_header>
             <div class="content_c">
-                <div class="item" v-for="item in index_hot">
+                <div v-for="item in index_hot" class="item">
                     <div class="title">{{item.desc}}</div>
                     <div class="good_pic_wrap">
                         <div class="icon"><img :src="item.img_level" alt=""></div>
@@ -112,25 +109,19 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
         <div class="row_c">
-            <div class="header_c">
-                <div class="title"><span class="big_font">巨</span>优惠</div>
-            </div>
+            <index_content_header start="巨" other="优惠" flag=false></index_content_header>
             <div class="content_c">
                 <div class="sales">
-                    <div>优惠套餐 1: <a href="#">迷人睫毛膏魅力眼线膏</a></div>
-                    <div>优惠套餐 2: <a href="#">诱人唇彩、肌活原生液</a></div>
-                    <div>优惠套餐 3: <a href="#">年轻无瑕：持妆粉底液、小棕瓶修护精华</a></div>
-                    <div>优惠套餐 4: <a href="#">眼部修复：肌透眼部精华霜、小棕瓶护眼精华</a></div>
+                    <div v-for="item,i in index_sales">优惠套餐 {{i+1}}: <a :href="item.link">{{item.title}}</a></div>
                 </div>
                 <div class="sales_part_r">
                     <div class="btn"><i class="fa fa-chevron-left"></i></div>
                     <div class="sales_pics">
-                        <img src="./img/s1.jpg" alt="">
-                        <img src="./img/s2.jpg" alt="">
-                        <img src="./img/s3.jpg" alt="">
+                        <img  v-for="item in index_sales" :src="item.img" alt="">
                     </div>
                     <div class="btn"><i class="fa fa-chevron-right"></i></div>
                 </div>
@@ -138,26 +129,10 @@
             </div>
         </div>
         <div class="row_c">
-            <div class="header_c">
-                <div class="title"><span class="big_font">化</span>妆教程</div>
-            </div>
+            <index_content_header start="化" other="妆教程" flag=false></index_content_header>
             <div class="content_c">
                 <!--可以自己写按钮，然后调用js实现控制-->
-                <div class="item_tutorial">
-                    <video muted src="img/ex.mp4" width="218" height="147" poster="img/v.jpg" controls="controls">
-                        your browser does not support the video tag
-                    </video>
-                </div>
-                <div class="item_tutorial">
-                    <video muted src="img/ex.mp4" width="218" height="147" poster="img/v.jpg" controls="controls">
-                        your browser does not support the video tag
-                    </video>
-                </div>
-                <div class="item_tutorial">
-                    <video muted src="img/ex.mp4" width="218" height="147" poster="img/v.jpg" controls="controls">
-                        your browser does not support the video tag
-                    </video>
-                </div>
+                <h5video width="218" height="147" v-for="item in index_tutorial" :v_src="item.video_src" :i_src="item.img_src"></h5video>
             </div>
         </div>
     </section>
@@ -168,7 +143,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="src/js/app.js"></script>
-    <script src="src/js/vue.js"></script>
+    <!--<script src="src/js/vue.js"></script>-->
     <script>
         Carousel(document.getElementsByClassName("nav_pic")[0]);
     </script>
