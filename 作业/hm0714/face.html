@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="body">
-    <header>
+    <header id="header">
         <div class="ha">
             <a href="#"><img src="./img/logo.png" alt=""></a>
             <div class="search">
@@ -25,52 +25,22 @@
                 <li><a href="index.html">首页</a></li>
                 <li><a href="javascript:void(0)" class="active">脸
                     <div class="more">
-                        <div class="item">
-                            卸妆乳
-                        </div>
-                        <div class="item">
-                            洁面乳
-                        </div>
-                        <div class="item">
-                            BB霜
-                        </div>
-                        <div class="item">
-                            粉底液
-                        </div>
-                        <div class="item">
-                            腮红
+                        <div class="item" v-for="item in goods_type.face">
+                            {{item.type}}
                         </div>
                     </div>
                 </a></li>
                 <li><a href="eye.html">眼
                     <div class="more">
-                        <div class="item">
-                            眼影
-                        </div>
-                        <div class="item">
-                            眼线笔
-                        </div>
-                        <div class="item">
-                            卧蚕笔
-                        </div>
-                        <div class="item">
-                            睫毛膏
-                        </div>
-                        <div class="item">
-                            眉粉
+                        <div class="item" v-for="item in goods_type.eye">
+                            {{item.type}}
                         </div>
                     </div>
                 </a></li>
                 <li><a href="#">唇
                     <div class="more">
-                        <div class="item">
-                            唇彩
-                        </div>
-                        <div class="item">
-                            唇部打底
-                        </div>
-                        <div class="item">
-                            遮瑕膏
+                        <div class="item" v-for="item in goods_type.lips">
+                            {{item.type}}
                         </div>
                     </div>
                 </a></li>
@@ -85,63 +55,42 @@
     </div>
 
 
-    <section class="content">
+    <section class="content" id="index_content">
         <div class="step_line">
-            <div class="step step_now">
-                <div class="step_num item">Step1</div>
-                <div class="item">
-                    <a href="#">卸妆乳</a>
-                </div>
-                <div class="item">
-                    <a href="#">洁面乳</a>
-                </div>
-                <div class="item">
-                    <a href="#">BB霜</a>
-                </div>
-                <div class="item">
-                    <a href="#">粉底液</a>
-                </div>
-                <div class="item">
-                    <a href="#">腮红</a>
-                </div>
-            </div>
-            <div class="step step_other">
-                <div class="step_num item">Step2</div>
-            </div>
-            <div class="step step_other">
-                <div class="step_num item">Step3</div>
-            </div>
+            <step_line step="Step1" :types="goods_type.face"></step_line>
+            <step_line step="Step2"></step_line>
+            <step_line step="Step3"></step_line>
         </div>
         <div class="goods">
-<div class="row_g">
-    <div class="item">
-        <div class="good_pic">
-            <a href="#"><img src="./img/g1.jpg" alt=""></a>
-        </div>
-        <div class="num">￥289</div>
-        <div class="buy">
-            快速购买
-        </div>
-    </div>
-    <div class="item">
-        <div class="good_pic">
-            <a href="#"><img src="./img/g2.jpg" alt=""></a>
-        </div>
-        <div class="num">￥1068</div>
-        <div class="buy">
-            快速购买
-        </div>
-    </div>
-    <div class="item">
-        <div class="good_pic">
-            <a href="#"><img src="./img/g3.jpg" alt=""></a>
-        </div>
-        <div class="num">￥548</div>
-        <div class="buy">
-            快速购买
-        </div>
-    </div>
-</div>
+            <div class="row_g">
+                <div class="item">
+                    <div class="good_pic">
+                        <a href="#"><img src="./img/g1.jpg" alt=""></a>
+                    </div>
+                    <div class="num">￥289</div>
+                    <div class="buy">
+                        快速购买
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="good_pic">
+                        <a href="#"><img src="./img/g2.jpg" alt=""></a>
+                    </div>
+                    <div class="num">￥1068</div>
+                    <div class="buy">
+                        快速购买
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="good_pic">
+                        <a href="#"><img src="./img/g3.jpg" alt=""></a>
+                    </div>
+                    <div class="num">￥548</div>
+                    <div class="buy">
+                        快速购买
+                    </div>
+                </div>
+            </div>
             <div class="row_g">
                 <div class="item">
                     <div class="good_pic">
@@ -202,5 +151,7 @@
     </footer>
 
 </div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="src/js/app.js"></script>
 </body>
 </html>

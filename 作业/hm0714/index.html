@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="body">
-    <header>
+    <header id="header">
         <div class="ha">
             <a href="#"><img src="./img/logo.png" alt=""></a>
             <div class="search">
@@ -25,52 +25,22 @@
                 <li><a href="javascript:void(0)" class="active">首页</a></li>
                 <li><a href="face.html">脸
                     <div class="more">
-                        <div class="item">
-                            卸妆乳
-                        </div>
-                        <div class="item">
-                            洁面乳
-                        </div>
-                        <div class="item">
-                            BB霜
-                        </div>
-                        <div class="item">
-                            粉底液
-                        </div>
-                        <div class="item">
-                            腮红
+                        <div class="item" v-for="item in goods_type.face">
+                            {{item.type}}
                         </div>
                     </div>
                 </a></li>
                 <li><a href="eye.html">眼
                     <div class="more">
-                        <div class="item">
-                            眼影
-                        </div>
-                        <div class="item">
-                            眼线笔
-                        </div>
-                        <div class="item">
-                            卧蚕笔
-                        </div>
-                        <div class="item">
-                            睫毛膏
-                        </div>
-                        <div class="item">
-                            眉粉
+                        <div class="item" v-for="item in goods_type.eye">
+                            {{item.type}}
                         </div>
                     </div>
                 </a></li>
                 <li><a href="lips.html">唇
                     <div class="more">
-                        <div class="item">
-                            唇彩
-                        </div>
-                        <div class="item">
-                            唇部打底
-                        </div>
-                        <div class="item">
-                            遮瑕膏
+                        <div class="item" v-for="item in goods_type.lips">
+                            {{item.type}}
                         </div>
                     </div>
                 </a></li>
@@ -121,7 +91,7 @@
                 <div class="sales_part_r">
                     <div class="btn"><i class="fa fa-chevron-left"></i></div>
                     <div class="sales_pics">
-                        <img  v-for="item in index_sales" :src="item.img" alt="">
+                        <img v-for="item in index_sales" :src="item.img" alt="">
                     </div>
                     <div class="btn"><i class="fa fa-chevron-right"></i></div>
                 </div>
@@ -132,7 +102,8 @@
             <index_content_header start="化" other="妆教程" flag=false></index_content_header>
             <div class="content_c">
                 <!--可以自己写按钮，然后调用js实现控制-->
-                <h5video width="218" height="147" v-for="item in index_tutorial" :v_src="item.video_src" :i_src="item.img_src"></h5video>
+                <h5video width="218" height="147" v-for="item in index_tutorial" :v_src="item.video_src"
+                         :i_src="item.img_src"></h5video>
             </div>
         </div>
     </section>
