@@ -1,0 +1,195 @@
+@pc_width: 1024px;
+@head_input_height: 35px;
+//头部包括导航搜寻图标
+
+//轮播图部分
+.nav_pic {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 304px;
+  margin-top: 5px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  > .i_ul {
+    position: relative;
+    width: 400%;
+    height: 100%;
+    > li {
+      position: relative;
+      text-align: center;
+      width: 25%;
+      height: 100%;
+      float: left;
+      > a > img {
+        width: 100%;
+      }
+    }
+  }
+  .i_ul_pointer {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 10px;
+    margin: 0 auto;
+    .pointer {
+      display: inline-block;
+      margin: 0 16px;
+      width: 30px;
+      height: 8px;
+      overflow: hidden;
+      background-color: white;
+      border-radius: 1px;
+    }
+    .p_active {
+      background-color: rgba(232, 135, 37, 0.7);
+    }
+
+  }
+}
+
+//首页主体
+.content {
+  margin-top: 20px;
+  //主体中的一个版块
+  .row_c {
+    width: 904px;
+    margin: 0 auto;
+    //版块的头是公共的
+    > .header_c {
+      height: 36px;
+      line-height: 36px;
+      padding-right: 5px;
+      border-bottom: 1px solid #e98923;
+      text-align: right;
+      .big_font {
+        font-size: 22px;
+        color: #e98923;
+      }
+      .title {
+        text-align: left;
+        float: left;
+        height: 36px;
+        width: 80px;
+        border: 1px solid #e98923;
+
+      }
+      a {
+        color: #e98923;
+      }
+    }
+    //版块中的主体
+    > .content_c {
+      width: 100%;
+      padding-left: 64px;
+      margin-top: 16px;
+      margin-bottom: 14px;
+      overflow: hidden;
+      //第一个中的元素块
+      > .item {
+        position: relative;
+        float: left;
+        width: 186px;
+        margin-right: 88px;
+        > .title {
+          position: relative;
+          z-index: 999;
+          font-size: 12px;
+        }
+        > .good_pic_wrap {
+          width: 186px;
+          position: relative;
+          > .icon {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: -1px;
+            z-index: 99;
+          }
+          > .good_pic {
+            position: relative;
+            width: 172px;
+            height: 162px;
+            margin-top: 8px;
+            margin-left: 14px;
+            border: 1px solid white;
+            border-radius: 6px;
+            overflow: hidden;
+            img {
+              width: 100%;
+            }
+          }
+          &::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            z-index: 99;
+            top: -21px;
+            left: -6px;
+            width: 20px;
+            height: 70px;
+            border-right: 1px solid white;
+            transform-origin: bottom right;
+            transform: rotate(46deg);
+          }
+        }
+      }
+
+      //第二个中的内容
+      > .sales {
+        margin-top: -14px;
+        float: left;
+        div {
+          padding-top: 18px;
+          font-size: 12px;
+          a {
+            &:hover {
+              color: #e98923;
+            }
+          }
+        }
+      }
+      > .sales_part_r {
+        margin-top: 4px;
+        width: 334px;
+        float: right;
+        right: 24px;
+        .btn{
+          float: left;
+          width: 34px;
+          height: 34px;
+          cursor: pointer;
+          text-align: center;
+          line-height: 34px;
+          margin-top: 46px;
+          border-radius: 17px;
+          border: 1px solid white;
+        }
+        > .sales_pics {
+          float: left;
+          width: 200px;
+          height: 127px;
+          margin: 0 24px;
+          border-radius: 6px;
+          overflow: hidden;
+          >img{
+            height: 100%;
+          }
+        }
+      }
+      //首页带三个版块中的content内容
+  .item_tutorial{
+    float: left;
+    width: 218px;
+    height: 147px;
+    border: 2px solid white;
+    border-radius: 6px;
+    margin-right: 60px;
+    overflow: hidden;
+    video{
+      object-fit:cover;
+    }
+  }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+@pc_width: 1024px;
+@head_input_height: 35px;
+//头部标志搜索导航是公共部分，但登录注册只包含头部标志和黄色底框
+body {
+  background-color: black;
+  color: white;
+}
+a,input{
+  color: white;
+}
+
+.body {
+  width: @pc_width;
+  margin: 0 auto;
+  border: 1px solid white;
+}
+header {
+  width: @pc_width;
+  height: 192px;
+  padding-top: 58px;
+  > .ha {
+    position: relative;
+    height: 78px;
+    text-align: center;
+    margin: 0 60px;
+    border-bottom: 1px solid #e98923;
+    > .search {
+      position: absolute;
+      right: 2px;
+      top: 0;
+      width: 140px;
+      height: @head_input_height;
+      > form {
+        position: relative;
+        font-size: 14px;
+        > #search_ha {
+          text-indent: 1em;
+          background-color: transparent;
+          padding-right: 40px;
+          width: 140px;
+          height: @head_input_height;
+          border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        i {
+          position: absolute;
+          cursor: pointer;
+          width: 35px;
+          height: @head_input_height;
+          top: 0;
+          right: 0;
+          line-height: @head_input_height;
+        }
+      }
+
+    }
+  }
+  > .hb {
+    position: relative;
+    height: 57px;
+    padding-left: 70px;
+    > .nav_top {
+      height: 57px;
+      > li {
+        position: relative;
+        float: left;
+        width: 158px;
+        font-size: 19px;
+        line-height: 57px;
+        > .active {
+          box-shadow: 0 0 30px rgba(246, 194, 87, 0.7);
+          background-color: rgba(246, 194, 87, 0.3);
+        }
+        > a {
+          display: block;
+          float: left;
+          margin-top: 9px;
+          height: 40px;
+          padding: 0 12px;
+          border-radius: 20px;
+          line-height: 40px;
+
+          > .more {
+            display: none;
+            position: absolute;
+            top: 42px;
+            left: -5px;
+            z-index: 111;
+            width: 145px;
+            padding-bottom: 20px;
+            text-indent: 1em;
+            letter-spacing: 1px;
+            border-radius: 8px;
+            background-color: rgba(232, 135, 37, 0.7);
+            .item {
+              transition: 0.3s;
+              padding-left: 0px;
+              &:hover {
+                padding-left: 10px;
+              }
+            }
+          }
+          &:hover {
+            box-shadow: 0 0 30px rgba(246, 194, 87, 0.7);
+            background-color: rgba(246, 194, 87, 0.3);
+          }
+          &:hover > .more {
+            display: block;
+          }
+        }
+        > .item {
+          position: relative;
+          line-height: 40px;
+          height: 30px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+//脚部
+footer {
+  position: relative;
+  width: @pc_width;
+  text-align: center;
+  font-size: 11px;
+  margin-top: 60px;
+}

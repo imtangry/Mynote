@@ -1,0 +1,107 @@
+.nav_pic {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 304px;
+  margin-top: 5px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+.nav_pic > img {
+  height: 100%;
+}
+.content {
+  position: relative;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.content > .step_line {
+  font-size: 14px;
+  float: left;
+  width: 98px;
+  margin-left: 66px;
+}
+.content > .step_line > .step {
+  border-left: 3px solid #e98923;
+  padding-left: 5px;
+  padding-top: 38px;
+  padding-bottom: 35px;
+  margin-bottom: 70px;
+}
+.content > .step_line > .step > .step_num {
+  position: relative;
+  padding-left: 7px;
+}
+.content > .step_line > .step > .step_num::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 10px;
+  top: -1px;
+  left: -17px;
+}
+.content > .step_line > .step > .item {
+  width: 85px;
+  margin-bottom: 30px;
+}
+.content > .step_line > .step > .item > a:hover {
+  color: #e98923;
+}
+.content > .goods {
+  float: left;
+  width: 816px;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding-top: 8px;
+}
+.content > .goods > .row_g {
+  padding-left: 52px;
+  width: 816px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.content > .goods > .row_g > .item {
+  float: left;
+  width: 180px;
+  margin-right: 86px;
+}
+.content > .goods > .row_g > .item > .good_pic {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 5px;
+}
+.content > .goods > .row_g > .item > .good_pic img {
+  height: 100%;
+}
+.content > .goods > .row_g > .item:last-child {
+  margin-right: 0;
+}
+.content > .goods > .row_g > .item > .num {
+  float: left;
+  height: 24px;
+  line-height: 24px;
+  font-size: 20px;
+  padding-left: 5px;
+  color: white;
+}
+.content > .goods > .row_g > .item > .buy {
+  cursor: pointer;
+  float: right;
+  background-color: white;
+  color: black;
+  text-align: center;
+  width: 95px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.content > .goods > .row_g > .item > .buy:hover {
+  color: #e98923;
+}
+.bc_footer {
+  background-color: #e98923;
+}
+/*# sourceMappingURL=goods.css.map */

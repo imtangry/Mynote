@@ -1,0 +1,111 @@
+.nav_pic {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 304px;
+  margin-top: 5px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  > img {
+    height: 100%;
+  }
+}
+
+.content {
+  position: relative;
+  margin-top: 20px;
+  overflow: hidden;
+  //步骤线
+  > .step_line {
+    font-size: 14px;
+    float: left;
+    width: 98px;
+    margin-left: 66px;
+    > .step {
+      border-left: 3px solid #e98923;
+      padding-left: 5px;
+      padding-top: 38px;
+      padding-bottom: 35px;
+      margin-bottom: 70px;
+      > .step_num {
+        position: relative;
+        padding-left: 7px;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: white;
+          border-radius: 10px;
+          top: -1px;
+          left: -17px;
+        }
+      }
+      > .item {
+        width: 85px;
+        margin-bottom: 30px;
+        >a:hover{
+          color: #e98923;
+        }
+      }
+    }
+
+  }
+  //商品版块
+  > .goods {
+    float: left;
+    width: 816px;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding-top: 8px;
+    >.row_g{
+      padding-left: 52px;
+      width: 816px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      >.item{
+        float: left;
+        width: 180px;
+        margin-right: 86px;
+        >.good_pic{
+          width: 180px;
+          height: 180px;
+          margin-bottom: 5px;
+          img{
+            height: 100%;
+          }
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+        >.num{
+          float: left;
+          height: 24px;
+          line-height: 24px;
+          font-size: 20px;
+          padding-left: 5px;
+          color: white;
+        }
+        >.buy{
+          cursor: pointer;
+          float: right;
+          background-color: white;
+          color: black;
+          text-align: center;
+          width: 95px;
+          height: 24px;
+          line-height: 24px;
+          font-size: 16px;
+          font-weight: 600;
+          &:hover{
+            color: #e98923;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bc_footer {
+  background-color: #e98923;
+}
