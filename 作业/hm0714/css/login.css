@@ -4,13 +4,27 @@
   background-color: white;
   width: 1024px;
   padding: 20px 60px 0;
+  overflow: hidden;
 }
-.content .title {
+.content > .title {
   font-size: 28px;
   letter-spacing: 1px;
   color: black;
   border-bottom: 1px solid #ccc;
   padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+.content > .content_c {
+  width: 100%;
+}
+.content > .content_c > .login {
+  float: left;
+  width: 70%;
+  border-right: 1px solid #ccc;
+}
+.content > .content_c > .register {
+  float: left;
+  width: 30%;
 }
 .bc_footer {
   background-color: #e98923;
