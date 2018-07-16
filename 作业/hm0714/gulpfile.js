@@ -18,6 +18,7 @@ gulp.task('js',function () {
 gulp.task('html',function () {
     gulp.src('./*.html').pipe(html({collapseWhitespace:true})).pipe(gulp.dest('./src'));
 });
-gulp.task('watchcss',function(){
+gulp.task('w',function(){
     gulp.watch('./css/*.css',['css']);
+    gulp.watch('./js/*.js',['js']);
 })

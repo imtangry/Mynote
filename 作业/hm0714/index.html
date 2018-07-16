@@ -95,37 +95,20 @@
         </ul>
 
     </div>
-    <section class="content">
+    <section class="content" id="index_content">
+        <!--这一行可以循环-->
         <div class="row_c">
             <div class="header_c">
                 <div class="title"><span class="big_font">巨</span>热销</div>
                 <a href="#"><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i><span>more</span></a>
             </div>
             <div class="content_c">
-                <div class="item">
-                    <div class="title">TOP 1 迷人咬唇系列唇彩</div>
+                <div class="item" v-for="item in index_hot">
+                    <div class="title">{{item.desc}}</div>
                     <div class="good_pic_wrap">
-                        <div class="icon"><img src="./img/t1.png" alt=""></div>
+                        <div class="icon"><img :src="item.img_level" alt=""></div>
                         <div class="good_pic">
-                            <a href="#"><img src="./img/i1.jpg" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="title">TOP 2 吹弹可破不可思议BB霜</div>
-                    <div class="good_pic_wrap">
-                        <div class="icon"><img src="./img/t2.png" alt=""></div>
-                        <div class="good_pic">
-                            <a href="#"><img src="./img/i4.jpg" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="title">TOP 3 彩虹系列诱人七色眼影</div>
-                    <div class="good_pic_wrap">
-                        <div class="icon"><img src="./img/t3.png" alt=""></div>
-                        <div class="good_pic">
-                            <a href="#"><img src="./img/i3.jpg" alt=""></a>
+                            <a href="#"><img :src="item.img_goods" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -183,7 +166,9 @@
         <p>联系电话：15266666666</p>
         <p>版权信息：侵权必究</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="src/js/app.js"></script>
+    <script src="src/js/vue.js"></script>
     <script>
         Carousel(document.getElementsByClassName("nav_pic")[0]);
     </script>
