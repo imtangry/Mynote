@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .item {
+            position: relative;
+            padding-left: 30px;
+            width: 400px;
+            height: 40px;
+            margin-bottom: 20px;
+            line-height: 40px;
+            background-color: black;
+            color: white
+        }
+
+        .item::before {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            border-width: 6px;
+            border-style: solid;
+            border-left-color: white;
+            border-top-color: black;
+            border-right-color: black;
+            border-bottom-color: black;
+        }
+
+        .list {
+            position: absolute;
+            width: 400px;
+            z-index: 999;
+            top: 40px;
+            left: 0;
+
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <div class="item" v-for="item in data" @click="show(item)">{{item.type}}
+        <ul class="list" v-show="item.checked">
+            <li v-for="item in item.list">{{item}}</li>
+        </ul>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    var data = [{type: "品牌", list: ["HTC", "锤子", "SHARP", "GOOGLE", "HUAWEI"]},
+        {type: "尺寸", list: ["4英寸", "5英寸", "4.5英寸", "6英寸", "3.5英寸"]},
+        {type: "系统", list: ["氢OS", "黑莓", "WINDOW PHONE", "ANDROID", "IOS"]},
+        {type: "网络", list: ["联通4G", "移动4G", "电信4G", "三网通",]},]
+    var app = new Vue({
+        el: "#content",
+        data: {
+            data: data,
+            temp:false
+        },
+        methods: {
+            show: function (item) {
+                console.log("OK");
+                console.log(item);
+                if (item.checked) {
+                    item.checked = false;
+                } else {
+                    item.checked = true;
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>
