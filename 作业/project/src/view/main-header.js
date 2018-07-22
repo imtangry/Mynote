@@ -22,7 +22,7 @@ class MainHeader extends Component {
     }
     render() {
         var flag =false;
-        if(localStorage.isLogin==='null'){
+        if(localStorage.getItem("isLogin")===null){
             flag=false;
         }else{
             flag=true;
