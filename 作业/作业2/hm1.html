@@ -34,12 +34,12 @@
     专辑数：{{songSelected}}
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-<script>
+<script defer>
     var info = [
-        {list: "Hell", singer: "Lin", songs: 10},
-        {list: "Join", singer: "Jack", songs: 8},
-        {list: "Beauty", singer: "Bob", songs: 11},
-        {list: "This", singer: "Happy fxck", songs: 23},];
+        {list: "Hell", singer: "Lin", songs: 10, checked: false},
+        {list: "Join", singer: "Jack", songs: 8, checked: false},
+        {list: "Beauty", singer: "Bob", songs: 11, checked: false},
+        {list: "This", singer: "Happy fxck", songs: 23, checked: false},];
     var app = new Vue({
         el: "#table",
         data: {
